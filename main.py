@@ -22,7 +22,7 @@ states_list = []
 
 while len(states_list) < 50:
 
-    answer = (screen.textinput(title='Name a state', prompt='Enter a name of a state')).title()
+    answer = (screen.textinput(title=f'{len(states_list)} out of 50 states correct', prompt='Enter a name of a state')).title()
     states_list.append(answer)
     for index, rows in data.iterrows():
         if rows.state == answer:         # Find row containing the suggested state
